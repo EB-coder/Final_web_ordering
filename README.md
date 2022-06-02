@@ -50,7 +50,7 @@ In order to finish our order we need to fill the customer information and submit
  
  Some code was taken from this resources :<br> 
  https://o7planning.org/11679/spring-boot-file-upload<br>
- https://o7planning.org/11545/spring-boot-and-thymeleaf
+ https://o7planning.org/11545/spring-boot-and-thymeleaf<br>
  https://o7planning.org/11753/use-logging-in-spring-boot
  
 
