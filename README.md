@@ -32,7 +32,9 @@ User can buy different types of product by clicking "continue buy"<br>
 In order to finish our order we need to fill the customer information and submit it.
  
  ![customer info1](https://user-images.githubusercontent.com/73636880/171745835-e940a97c-4083-493a-acdd-8a6936c4517c.png)
+ 
  confirm your information and sent.
+ 
  ![confirmation](https://user-images.githubusercontent.com/73636880/171746484-42a93cea-af0d-41a9-8002-a527837561a5.png)
 ![success](https://user-images.githubusercontent.com/73636880/171746486-70be55bc-2483-40a5-96a2-62aa94dc7586.png)
  
