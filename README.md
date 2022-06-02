@@ -5,6 +5,8 @@
  and this page contain : menu on the top, Login and Registeration links<br>
  on the right side of the corner.<br>
  
+ Pay attention to the copyright side also! yes, I add it ;)
+ 
  ![about_main1](https://user-images.githubusercontent.com/73636880/171741234-546ccd8d-17fa-418f-8911-f0919d532ebb.png)
  
  Let's take a look to the Login page:<br>
