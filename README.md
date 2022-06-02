@@ -44,7 +44,10 @@ In order to finish our order we need to fill the customer information and submit
  Manager has some additional functions as "Registering new Employee", "Crating a new Product", "Order list"
  <br>
  ![manager login](https://user-images.githubusercontent.com/73636880/171747018-42941e6d-b0fe-41c3-8f11-a6344e6c5dce.png)
-
+ ![registration](https://user-images.githubusercontent.com/73636880/171747646-e9b099aa-a1ea-4478-803b-a1594a52352e.png)
+ 
+ Loggin in as employee will be restricted from functions as creating new products and registering new employee.
+ 
 
  
  
