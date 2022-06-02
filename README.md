@@ -48,6 +48,11 @@ In order to finish our order we need to fill the customer information and submit
  
  Loggin in as employee will be restricted from functions as creating new products and registering new employee.
  
+ Some code was taken from this resources :<br> 
+ https://o7planning.org/11679/spring-boot-file-upload
+ https://o7planning.org/11545/spring-boot-and-thymeleaf
+ https://o7planning.org/11753/use-logging-in-spring-boot
+ 
 
  
  
