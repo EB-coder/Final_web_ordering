@@ -134,7 +134,7 @@ public class AdminController {
         return "redirect:/productList";
     }
 
-    @GetMapping("/admin/register")
+    @GetMapping("/admin/RegisterEmployee")
     public String registerForm(Model model) {
         model.addAttribute("user",new Account());
         return "registerForm";
