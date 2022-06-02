@@ -29,9 +29,10 @@ User can buy different types of product by clicking "continue buy"<br>
  
  ![buy continua](https://user-images.githubusercontent.com/73636880/171744456-51d20468-a001-4c46-99bf-a5480fe0b7f2.png)
 
-In order to finish our order we need to fill the customer information and send it.
+In order to finish our order we need to fill the customer information and submit it.
  
- ![customer info](https://user-images.githubusercontent.com/73636880/171745449-8cee9f04-febe-418c-9fb8-8cdbecefa922.png)
+ ![customer info1](https://user-images.githubusercontent.com/73636880/171745835-e940a97c-4083-493a-acdd-8a6936c4517c.png)
+ 
 
  
  
