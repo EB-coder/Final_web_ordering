@@ -38,6 +38,13 @@ In order to finish our order we need to fill the customer information and submit
  ![confirmation](https://user-images.githubusercontent.com/73636880/171746484-42a93cea-af0d-41a9-8002-a527837561a5.png)
 ![success](https://user-images.githubusercontent.com/73636880/171746486-70be55bc-2483-40a5-96a2-62aa94dc7586.png)
  
+ Another thing is Login as Manager<br>
+ login: manager1<br>
+ password: 123<br>
+ Manager has some additional functions as "Registering new Employee", "Crating a new Product", "Order list"
+ <br>
+ ![manager login](https://user-images.githubusercontent.com/73636880/171747018-42941e6d-b0fe-41c3-8f11-a6344e6c5dce.png)
+
 
  
  
