@@ -31,6 +31,9 @@ User can buy different types of product by clicking "continue buy"<br>
 
 In order to finish our order we need to fill the customer information and send it.
  
+ ![customer info](https://user-images.githubusercontent.com/73636880/171745449-8cee9f04-febe-418c-9fb8-8cdbecefa922.png)
+
+ 
  
 
  
