@@ -5,7 +5,7 @@
  we have: menu on the top, and Login and Register
  on the right side of the corner.
  
- ![about_main](https://user-images.githubusercontent.com/73636880/171702370-305d2792-746a-48b2-b8de-41b45624d044.png)
+ ![about_main1](https://user-images.githubusercontent.com/73636880/171741234-546ccd8d-17fa-418f-8911-f0919d532ebb.png)
  
  Let's take a look to the Login page:
  Here is the login page actually for the Manager not for the users, because the users can order without signing up that's why
