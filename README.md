@@ -16,7 +16,7 @@
  
  ![login page](https://user-images.githubusercontent.com/73636880/171741777-0d92c027-2540-4e92-b40e-8ddf085a3b59.png)
  
- ##From the Product list page we can buy and order our coffee.
+ ##From the Product list page users can buy and order our coffee.
  
  ![product list user](https://user-images.githubusercontent.com/73636880/171743815-86739d98-ac16-4067-b72a-067be9600b2a.png)
 
