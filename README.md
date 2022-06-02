@@ -19,7 +19,17 @@
  ##From the Product list page users can buy and order their coffee.
  
  ![product list user](https://user-images.githubusercontent.com/73636880/171743815-86739d98-ac16-4067-b72a-067be9600b2a.png)
+ 
+User can buy different types of product by clicking "continue buy"<br>
+ 1.buy the product<br>
+ 2.set the quantity<br>
+ 3.update quantity<br>
+ 4.continue buy or enter customer info.<br>
+ All the choosen products will be in "My cart" section.
+ 
+ ![buy continua](https://user-images.githubusercontent.com/73636880/171744456-51d20468-a001-4c46-99bf-a5480fe0b7f2.png)
 
+In order to finish our order we need to fill the customer information and send it.
  
  
 
