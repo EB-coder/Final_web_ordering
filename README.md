@@ -1,4 +1,4 @@
-#This is the online coffee ordering shop project.
+##This is the online coffee ordering shop project.
 
  Take a look to the main <About> page of this coffee shop:<br>
  From here users can read about the sho,
@@ -15,6 +15,11 @@
  As you can see below, we must to write true (username and password).
  
  ![login page](https://user-images.githubusercontent.com/73636880/171741777-0d92c027-2540-4e92-b40e-8ddf085a3b59.png)
+ 
+ ##From the Product list page we can buy and order our coffee.
+ 
+ ![product list user](https://user-images.githubusercontent.com/73636880/171743815-86739d98-ac16-4067-b72a-067be9600b2a.png)
+
  
  
 
