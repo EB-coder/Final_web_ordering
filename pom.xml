@@ -7,18 +7,18 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.o7planning</groupId>
-	<artifactId>SbHibernateShoppingCart</artifactId>
+	<artifactId>SbHibernateShopping</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>SbHibernateShoppingCart</name>
-	<description>Shopping Cart + Spring Boot + Hibernate + Thymeleaf</description>
+	<description>Demo spring boot application</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.0.0.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 
 	<properties>
@@ -62,8 +62,7 @@
 			<scope>runtime</scope>
 		</dependency>
 
-		<!-- SQLServer JDBC driver (JTDS) -->
-		<!-- http://mvnrepository.com/artifact/net.sourceforge.jtds/jtds -->
+
 		<dependency>
 			<groupId>net.sourceforge.jtds</groupId>
 			<artifactId>jtds</artifactId>
