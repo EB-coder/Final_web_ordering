@@ -7,8 +7,60 @@
 </head>
 <body>
 
-<th:block th:include="/_header"></th:block>
-<th:block th:include="/_menu"></th:block>
+<div class="header-container"
+     xmlns:th="http://www.thymeleaf.org"
+     xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+    <div class="site-name">Online Coffee Ordering Shop</div>
+
+    <div class="header-bar">
+        <th:block sec:authorize="isAuthenticated()">
+            Hello
+            <a th:href="@{/admin/accountInfo}" th:utext="${#request.userPrincipal.name}">..</a>
+            &nbsp;|&nbsp;
+            <a th:href="@{/admin/logout}">Logout</a>
+        </th:block>
+
+        <th:block sec:authorize="!isAuthenticated()">
+            <a th:href="@{/admin/login}">Login</a>
+        </th:block>
+    </div>
+
+</div>
+<div class="menu-container"
+     xmlns:th="http://www.thymeleaf.org"
+     xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" >
+    <a th:href="@{/}">About</a>
+    |
+    <a th:href="@{/productList}">
+        Product List
+    </a>
+    |
+    <a th:href="@{/shoppingCart}">
+        My Cart
+    </a>
+    |
+    <th:block sec:authorize="hasAnyRole('ROLE_MANAGER','ROLE_EMPLOYEE')">
+        <a th:href="@{/admin/orderList}">
+            Order List
+        </a>
+        |
+    </th:block>
+    <th:block sec:authorize="hasRole('ROLE_MANAGER')">
+        <a th:href="@{/admin/product}">
+            Create Product
+        </a>
+        |
+    </th:block>
+    <th:block sec:authorize="hasRole('ROLE_MANAGER')">
+        <a th:href="@{/admin/RegisterEmployee}">
+            Register new Employee
+        </a>
+    </th:block>
+</div>
+
+
+
 
 <div class="page-title">Product</div>
 <div th:if="${errorMessage!= null}" class="error-message" th:utext="${errorMessage}">
@@ -68,7 +120,15 @@
     </table>
 </form>
 
-<th:block th:include="/_footer"></th:block>
+<div class="footer-container"
+     xmlns:th="http://www.thymeleaf.org">
+
+    @Copy right  <a href="https://github.com/EB-coder/Final_web_ordering"
+                    target="_blank">OrderingWeb</a>
+    <br>
+    See more on <a>GitHub</a>
+
+</div>
 
 </body>
 </html>
