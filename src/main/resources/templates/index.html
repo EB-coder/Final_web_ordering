@@ -26,7 +26,40 @@
     </div>
 
 </div>
-<th:block th:include="/_menu"></th:block>
+<div class="menu-container"
+     xmlns:th="http://www.thymeleaf.org"
+     xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" >
+    <a th:href="@{/}">About</a>
+    |
+    <a th:href="@{/productList}">
+        Product List
+    </a>
+    |
+    <a th:href="@{/shoppingCart}">
+        My Cart
+    </a>
+    |
+    <th:block sec:authorize="hasAnyRole('ROLE_MANAGER','ROLE_EMPLOYEE')">
+        <a th:href="@{/admin/orderList}">
+            Order List
+        </a>
+        |
+    </th:block>
+    <th:block sec:authorize="hasRole('ROLE_MANAGER')">
+        <a th:href="@{/admin/product}">
+            Create Product
+        </a>
+        |
+    </th:block>
+    <th:block sec:authorize="hasRole('ROLE_MANAGER')">
+        <a th:href="@{/admin/RegisterEmployee}">
+            Register new Employee
+        </a>
+    </th:block>
+</div>
+
+
+
 <div class="main-welcome-title"><b>Welcome</b></div>
 <div class="page-title">About Coffee page</div>
 <div class="demo-container">
