@@ -48,6 +48,10 @@ In order to finish our order we need to fill the customer information and submit
  
  Loggin in as employee will be restricted from functions as creating new products and registering new employee.
  
+ Database (Postgresql) diagram:
+ ![diagram](https://user-images.githubusercontent.com/73636880/171935546-b2ab9564-a470-45cd-9350-76d5ba493040.png)
+
+ 
  Some code was taken from this resources :<br> 
  https://o7planning.org/11679/spring-boot-file-upload<br>
  https://o7planning.org/11545/spring-boot-and-thymeleaf<br>
