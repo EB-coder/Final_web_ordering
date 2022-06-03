@@ -12,7 +12,7 @@
 	<packaging>jar</packaging>
 
 	<name>SbHibernateShoppingCart</name>
-	<description>Demo spring boot application</description>
+	<description>Demo project for Spring boot<</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
