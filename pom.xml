@@ -6,7 +6,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.o7planning</groupId>
+	<groupId>com.spring.ordering</groupId>
 	<artifactId>SbHibernateShopping</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
