@@ -10,5 +10,9 @@ This is the main page of our application:
 ### After we need to fell the blanks with your email and quantity.
 ![confirm order](https://user-images.githubusercontent.com/73636880/172010170-58a7a362-0c0a-477c-aabb-b43d09803b74.png)
 Success! Your order info sent to your email.
+![success1](https://user-images.githubusercontent.com/73636880/172010472-a10a8d2a-4d87-4c70-8b80-67d316133ed6.png)
+
+Diagram (Postgresql):
+
 
 
