@@ -6,10 +6,11 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/reg.css}">
 </head>
 <body>
-<div id="logo">
-    <img src="https://st-1.akipress.org/st_all/bilim/9/1519540999.2.jpg" width="100px" height="auto">
-</div>
+
 <div class="main" th:object="${status}">
+    <div id="logo">
+        <img src="https://st-1.akipress.org/st_all/bilim/9/1519540999.2.jpg" width="100px" height="auto">
+    </div>
     <form th:action="@{/reg}" th:object="${user}" method="POST">
         <div th:if="${status.isUsed == true}" class="alert alert-error" id="reg-alert">
             Username is already in use!
@@ -23,6 +24,7 @@
             <input type="password" th:field="*{password}" id="pass" name="pass" placeholder="Password" required="">
         </div>
         <button type="submit" id="regbtn">Register</button>
+
     </form>
 </div>
 <div class="footer">

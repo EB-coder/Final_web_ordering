@@ -6,10 +6,12 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/reg.css}">
 </head>
 <body>
-<div id="logo">
-    <img src="https://st-1.akipress.org/st_all/bilim/9/1519540999.2.jpg" width="100px" height="auto">
-</div>
+
 <div class="main">
+    <br>
+    <div id="logo">
+        <img src="https://st-1.akipress.org/st_all/bilim/9/1519540999.2.jpg" width="100px" height="auto">
+    </div>
     <form th:action="@{/login}" method="post">
         <div th:if="${param.error}" class="alert alert-error">
             Invalid username and password.

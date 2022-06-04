@@ -1,6 +1,8 @@
 body {
     background-color: #c9af9b;
     text-align: center;
+    background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ5dS5xTzFSbMFQbY4Q05vrn8StAk4pFFpCJr7yhxe7u91E55F2YhKywYzP6x_iBL72Nk&usqp=CAU");
+
 }
 
 .alert {
@@ -27,10 +29,11 @@ body {
     align-items: center;
     margin: 30px auto;
     width: 400px;
-    height: 400px;
+    height: 500px;
     background-color: #ffffff;
     border-radius: 20px;
     border: 2px dashed black;
+    padding: 20px;
 }
 
 label {

@@ -29,7 +29,9 @@
 </div>
 <div class="main alert-success" th:if="${order.isSent == true}">
     <p>SUCCESS!!!<br>Order was delivered to the <span id="emailspan" th:text="${order.email}"></span>.</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL_NGpMMKDiCQXXcPHul-92IZ6NlJRoSI9Fg&usqp=CAU">
 </div>
+
 <div style="margin-bottom: 10px">
     <hr/>
     <form th:action="@{/main}">

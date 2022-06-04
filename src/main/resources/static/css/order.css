@@ -1,10 +1,12 @@
 label {
     margin: 4px 4px 4px 4px;
+
 }
 
 body {
     background-color: #c9af9b;
     text-align: center;
+    background:url("https://static.olocdn.net/img/chuys/hero/mobile.png?v=1654110972");
 }
 
 #backtomain {
