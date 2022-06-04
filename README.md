@@ -13,6 +13,8 @@ Success! Your order info sent to your email.
 ![success1](https://user-images.githubusercontent.com/73636880/172010472-a10a8d2a-4d87-4c70-8b80-67d316133ed6.png)
 
 Diagram (Postgresql):
+![diagram](https://user-images.githubusercontent.com/73636880/172011725-7f24932b-b647-496a-9060-c4201956d397.png)
+
 
 
 
