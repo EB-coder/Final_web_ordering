@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/reg.css}">
+</head>
+<body>
+<div id="logo">
+    <img src="https://st-1.akipress.org/st_all/bilim/9/1519540999.2.jpg" width="100px" height="auto">
+</div>
+<div class="main" th:object="${status}">
+    <form th:action="@{/reg}" th:object="${user}" method="POST">
+        <div th:if="${status.isUsed == true}" class="alert alert-error" id="reg-alert">
+            Username is already in use!
+        </div>
+        <div class="bl" id="top">
+            <label for="username">Enter username: </label>
+            <input type="text" th:field="*{username}" id="username" name="user" placeholder="Username" required="">
+        </div>
+        <div class="bl">
+            <label for="pass">Enter password: </label>
+            <input type="password" th:field="*{password}" id="pass" name="pass" placeholder="Password" required="">
+        </div>
+        <button type="submit" id="regbtn">Register</button>
+    </form>
+</div>
+<div class="footer">
+    <p>Copyrights reserved. Bishkek, International University Ala-Too 2022.</p>
+</div>
+</body>
+</html>

@@ -1,65 +1,40 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
+    <title>Please login</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/reg.css}">
 </head>
 <body>
-<th:block th:include="/_header"></th:block>
-<th:block th:include="/_menu"></th:block>
-
-<div class="page-title-admins">Login (For Employee, Manager)</div>
-
-<div class="login-container">
-    <h3>Enter username and password</h3>
-    <br>
-    <!-- /login?error=true -->
-    <th:block th:if="${#session != null && #session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION') != null}">
-        <div th:if= "${#request.getParameter('error') == 'true'}"
-             style="color: red; margin: 10px 0px;">
-            Login Failed!!!<br /> Reason :
-            <span th:utext="${#session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION').message}"></span>
+<div id="logo">
+    <img src="https://st-1.akipress.org/st_all/bilim/9/1519540999.2.jpg" width="100px" height="auto">
+</div>
+<div class="main">
+    <form th:action="@{/login}" method="post">
+        <div th:if="${param.error}" class="alert alert-error">
+            Invalid username and password.
         </div>
-    </th:block>
-
-    <form method="POST"
-          th:action="@{/j_spring_security_check}">
-        <table>
-            <tr>
-                <td>User Name *</td>
-                <td><input name="userName" /></td>
-            </tr>
-            <tr>
-                <td>Password *</td>
-                <td><input type="password" name="password" /></td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>
-                    <input type="submit" value="Login" />
-                    <input type="reset"  value="Reset" />
-                </td>
-            </tr>
-        </table>
+        <div th:if="${param.logout}" class="alert alert-success">
+            You have been logged out.
+        </div>
+        <div class="bl" id="top">
+            <label for="un">Username</label>
+            <input id="un" type="text" name="username" placeholder="Username" required="">
+        </div>
+        <div class="bl">
+            <label for="pass">Password</label>
+            <input id="pass" type="password" name="password" placeholder="Password" required="">
+        </div>
+        <button type="submit">Login</button>
     </form>
-
-    <span class="error-message" th:utext="${error}"></span>
-
+    <form th:action="@{/reg}" method="GET">
+        <button type="submit" id="regbtn">
+            Sign Up
+        </button>
+    </form>
 </div>
-<div class="image-logo">
-    <img src="https://data.kaktus.media/image/big/2021-06-01_12-14-01_785291.jpg" alt="logo_of_AIU" height="100" width="100">
+<div class="footer">
+    <p>Copyrights reserved. Bishkek, International University Ala-Too 2022.</p>
 </div>
-
-
-<div style="text-align:left">
-    <h3>User/Password:</h3>
-    <ul>
-        <li>manager1/123</li>
-    </ul>
-</div>
-
-<th:block th:include="/_footer"></th:block>
-
 </body>
 </html>

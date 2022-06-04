@@ -1,84 +1,54 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org/">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Coffee Shop Online</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
+    <title>Drinks Shop</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.5/datatables.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+
 </head>
+
 <body>
-<div class="header-container"
-     xmlns:th="http://www.thymeleaf.org"
-     xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
-
-    <div class="site-name">Online Coffee Ordering Shop</div>
-
-    <div class="header-bar">
-        <th:block sec:authorize="isAuthenticated()">
-            Hello
-            <a th:href="@{/admin/accountInfo}" th:utext="${#request.userPrincipal.name}">..</a>
-            &nbsp;|&nbsp;
-            <a th:href="@{/admin/logout}">Logout</a>
-        </th:block>
-
-        <th:block sec:authorize="!isAuthenticated()">
-            <a th:href="@{/admin/login}">Login</a>
-        </th:block>
+<div class="container">
+    <div id="myheader">
+        <form th:action="@{/logout}">
+            <button type="submit">Log Out</button>
+        </form>
+        <form th:action="@{/about}">
+            <button type="submit">About</button>
+        </form>
     </div>
-
+    <hr/>
+    <h2>Drinks Shop</h2>
+    <hr/>
+    <table class="table table-bordered table-striped" id="list-table">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Drink</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="drink : ${drinks}">
+            <td th:style="'background:url('+ ${drink.image_url} +');background-repeat: no-repeat;background-size: 100%;'"></td>
+            <td th:text="${drink.name}"></td>
+            <td th:text="${drink.price}"></td>
+            <td>
+                <a th:href="@{/order(id=${drink.id})}"
+                   class="btn btn-info">BUY</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 </div>
-<div class="menu-container"
-     xmlns:th="http://www.thymeleaf.org"
-     xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" >
-    <a th:href="@{/}">About</a>
-    |
-    <a th:href="@{/productList}">
-        Product List
-    </a>
-    |
-    <a th:href="@{/shoppingCart}">
-        My Cart
-    </a>
-    |
-    <th:block sec:authorize="hasAnyRole('ROLE_MANAGER','ROLE_EMPLOYEE')">
-        <a th:href="@{/admin/orderList}">
-            Order List
-        </a>
-        |
-    </th:block>
-    <th:block sec:authorize="hasRole('ROLE_MANAGER')">
-        <a th:href="@{/admin/product}">
-            Create Product
-        </a>
-        |
-    </th:block>
-    <th:block sec:authorize="hasRole('ROLE_MANAGER')">
-        <a th:href="@{/admin/RegisterEmployee}">
-            Register new Employee
-        </a>
-    </th:block>
+<div class="footer">
+    <p>Copyrights reserved. Bishkek, International University Ala-Too 2022.</p>
 </div>
-
-
-
-<div class="main-welcome-title"><b>Welcome</b></div>
-<div class="page-title">About Coffee page</div>
-<div class="demo-container">
-    <h3>Enjoy and order your own coffee</h3>
-    <br>
-    <div class="main-image">
-        <img width="620" height="270" th:src="@{${'images/coffee.jpg'}}" alt="main-page-image">
-    </div>
-</div>
-
-<div class="footer-container"
-     xmlns:th="http://www.thymeleaf.org">
-
-    @Copy right  <a href="https://github.com/EB-coder/Final_web_ordering"
-                    target="_blank">OrderingWeb</a>
-    <br>
-    See more on <a>GitHub</a>
-
-</div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
+
 </html>

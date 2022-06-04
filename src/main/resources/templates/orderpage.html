@@ -1,0 +1,46 @@
+<html xmlns:th="http://www.thymeleaf.org/">
+
+<head>
+    <title>Order</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/order.css}">
+
+</head>
+
+<body>
+<div class="main" th:if="${order.isSent == false}" th:object="${drink}">
+    <h2>Confirm order</h2>
+    <hr/>
+
+    <form th:action="@{/send-order}" th:object="${order}" method="POST">
+        <div class="bl" id="top">
+            <input class="readonly" type="text" th:field="${drink.name}" readonly/>
+        </div>
+
+        <div class="bl">
+            <label for="email">Enter email:</label>
+            <input type="email" id="email" th:field="*{email}">
+        </div>
+        <div class="bl">
+            <label for="q">Enter quantity:</label>
+            <input type="number" id="q" th:field="*{quantity}"/>
+        </div>
+        <button type="submit" class="button">Confirm!</button>
+    </form>
+</div>
+<div class="main alert-success" th:if="${order.isSent == true}">
+    <p>SUCCESS!!!<br>Order was delivered to the <span id="emailspan" th:text="${order.email}"></span>.</p>
+</div>
+<div style="margin-bottom: 10px">
+    <hr/>
+    <form th:action="@{/main}">
+        <button type="submit" id="backtomain">Back to main page</button>
+    </form>
+    <hr/>
+</div>
+
+<div class="footer">
+    <p>Copyrights reserved. Bishkek, International University Ala-Too 2022.</p>
+</div>
+</body>
+
+</html>

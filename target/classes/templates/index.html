@@ -1,24 +1,54 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org/">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Coffee Shop Online</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
+    <title>Drinks Shop</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.5/datatables.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+
 </head>
+
 <body>
-<th:block th:include="/_header"></th:block>
-<th:block th:include="/_menu"></th:block>
-<div class="main-welcome-title"><b>Welcome</b></div>
-<div class="page-title">About Coffee page</div>
-<div class="demo-container">
-    <h3>Enjoy and order your own coffee</h3>
-    <br>
-    <div class="main-image">
-        <img width="620" height="270" th:src="@{${'images/coffee.jpg'}}" alt="main-page-image">
+<div class="container">
+    <div id="myheader">
+        <form th:action="@{/logout}">
+            <button type="submit">Log Out</button>
+        </form>
+        <form th:action="@{/about}">
+            <button type="submit">About</button>
+        </form>
     </div>
+    <hr/>
+    <h2>Drinks Shop</h2>
+    <hr/>
+    <table class="table table-bordered table-striped" id="list-table">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Drink</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="drink : ${drinks}">
+            <td th:style="'background:url('+ ${drink.image_url} +');background-repeat: no-repeat;background-size: 100%;'"></td>
+            <td th:text="${drink.name}"></td>
+            <td th:text="${drink.price}"></td>
+            <td>
+                <a th:href="@{/order(id=${drink.id})}"
+                   class="btn btn-info">BUY</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 </div>
-
-<th:block th:include="/_footer"></th:block>
-
+<div class="footer">
+    <p>Copyrights reserved. Bishkek, International University Ala-Too 2022.</p>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
+
 </html>
